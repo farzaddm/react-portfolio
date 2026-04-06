@@ -6,6 +6,7 @@ import {CacheProvider} from "@emotion/react";
 import {HelmetProvider, Helmet} from "react-helmet-async";
 import createCache from "@emotion/cache";
 import {prefixer} from "stylis";
+import Header from "./components/ui/Header";
 
 const theme = createTheme({
   direction: "rtl",
@@ -28,9 +29,7 @@ function App() {
             <Helmet>
               <title>وب سایت شخصی فرزاد</title>
             </Helmet>
-            <div className="App">
-              <Button variant="contained">کلیک کن</Button>
-            </div>
+            <Header />
           </HelmetProvider>
         </ThemeProvider>
       </CacheProvider>
