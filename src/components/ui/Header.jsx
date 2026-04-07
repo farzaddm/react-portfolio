@@ -17,7 +17,7 @@ const Header = () => {
   return (
       <>
         <ElevationScroll>
-          <AppBar position="absolute">
+          <AppBar position="static">
             <Toolbar>
               <Button variant="contained" color="success">کلیک کن</Button>
             </Toolbar>
