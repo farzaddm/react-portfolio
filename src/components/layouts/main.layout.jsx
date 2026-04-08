@@ -20,7 +20,7 @@ const MainLayout = ({children}) => {
           <HelmetProvider>
             <Grid container sx={{height: "100vh"}}>
               <Sidebar/>
-              <Grid size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 10}} sx={{backgroundColor: "primary.main"}}>
+              <Grid size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 10}} sx={{backgroundColor: "secondary.main"}}>
                 <Typography variant="h5" sx={{textAlign: "center"}}>main contain</Typography>
                 {children}
               </Grid>
