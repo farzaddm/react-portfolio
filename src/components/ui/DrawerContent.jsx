@@ -8,14 +8,13 @@ import {
 } from "@mui/icons-material";
 import {grey} from "@mui/material/colors";
 
-const DrawerContent = ({value, handleChange}) => {
+const DrawerContent = ({value, handleChange, setDrawerOpen}) => {
   const tabParams = (index) => {
     return {
       id: `sidebar-tab-${index}`,
       "aria-controls": `tabpanel-${index}`,
     }
   }
-
 
   return (
       <Box sx={{justifyContent: "center", textAlign: "center", mt: 2}}>
@@ -28,12 +27,22 @@ const DrawerContent = ({value, handleChange}) => {
 
         <Divider variant="middle" color={grey[900]}/>
         <Tabs orientation="vertical" variant="scrollable" scrollButtons="auto" allowScrollButtonsMobile value={value}
-              onChange={handleChange} >
-          <Tab label="خانه" icon={<HomeRounded/>} iconPosition="start" {...tabParams(0)}/>
-          <Tab label="درباره من" icon={<FaceRounded/>} iconPosition="start" {...tabParams(1)}/>
-          <Tab label="رزومه من" icon={<TextSnippetRounded/>} iconPosition="start" {...tabParams(2)}/>
-          <Tab label="نمونه کارها" icon={<TerminalRounded/>} iconPosition="start" {...tabParams(3)}/>
-          <Tab label="ارتباط با من" icon={<ConnectWithoutContactRounded/>} iconPosition="start" {...tabParams(4)}/>
+              onChange={handleChange}>
+          <Tab label="خانه" icon={<HomeRounded/>}
+               sx={{"&.MuiTab-root": {minHeight: 50, my: 0.5, mx: 1, backgroundColor: grey[800], borderRadius: 2}}}
+               iconPosition="start" {...tabParams(0)} onClick={() => setDrawerOpen(false)}/>
+          <Tab label="درباره من" icon={<FaceRounded/>}
+               sx={{"&.MuiTab-root": {minHeight: 50, my: 0.5, mx: 1, backgroundColor: grey[800], borderRadius: 2}}}
+               iconPosition="start" {...tabParams(1)} onClick={() => setDrawerOpen(false)}/>
+          <Tab label="رزومه من" icon={<TextSnippetRounded/>}
+               sx={{"&.MuiTab-root": {minHeight: 50, my: 0.5, mx: 1, backgroundColor: grey[800], borderRadius: 2}}}
+               iconPosition="start" {...tabParams(2)} onClick={() => setDrawerOpen(false)}/>
+          <Tab label="نمونه کارها" icon={<TerminalRounded/>}
+               sx={{"&.MuiTab-root": {minHeight: 50, my: 0.5, mx: 1, backgroundColor: grey[800], borderRadius: 2}}}
+               iconPosition="start" {...tabParams(3)} onClick={() => setDrawerOpen(false)}/>
+          <Tab label="ارتباط با من" icon={<ConnectWithoutContactRounded/>}
+               sx={{"&.MuiTab-root": {minHeight: 50, my: 0.5, mx: 1, backgroundColor: grey[800], borderRadius: 2}}}
+               iconPosition="start" {...tabParams(4)} onClick={() => setDrawerOpen(false)}/>
         </Tabs>
 
         <Divider variant="middle" color={grey[900]}/>

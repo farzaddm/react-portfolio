@@ -7,7 +7,7 @@ const TabPanel = ({children, value, index, ...others}) => {
            aria-labelledby={`sidebar-tab-${index}`} {...others}>
         {value === index && (
             <Box sx={{p: 3}}>
-              <Typography>{children}</Typography>
+              <Typography component="div">{children}</Typography>
             </Box>
         )}
       </div>
