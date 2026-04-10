@@ -1,7 +1,7 @@
 import {createTheme} from "@mui/material";
 
 
-export const theme = createTheme({
+export const index = createTheme({
   direction: "rtl",
   palette: {
     mode: "dark",
