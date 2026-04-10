@@ -1,11 +1,9 @@
 import {SidebarContent} from "./";
-import SidebarDrawer from "../drawer/SidebarDrawer";
-import DrawerActionButton from "../drawer/DrawerActionButton";
+import {SidebarDrawer} from "../drawer/";
 
 const Sidebar = () => {
   return (
       <>
-        <DrawerActionButton/>
         <SidebarContent/>
         <SidebarDrawer/>
       </>

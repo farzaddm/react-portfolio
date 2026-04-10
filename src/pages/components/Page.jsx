@@ -1,20 +1,20 @@
-import {Box, Typography} from "@mui/material";
+import {Box} from "@mui/material";
 import {useContext} from "react";
-import MainContext from "../context/"
+import MainContext from "../../context"
 
 
-const TabPanel = ({children, index, ...others}) => {
+const Page = ({children, index, ...others}) => {
   const {pageNumber} = useContext(MainContext);
   return (
       <div role="tabpanel" hidden={pageNumber !== index} id={`tabpanel-${index}`}
            aria-labelledby={`sidebar-tab-${index}`} {...others}>
         {pageNumber === index && (
-            <Box sx={{p: 3}}>
-              <Typography component="div">{children}</Typography>
+            <Box sx={{height: "100vh", overflowY: "hidden"}}>
+              {children}
             </Box>
         )}
       </div>
   );
 };
 
-export default TabPanel;
+export default Page;

@@ -1,11 +1,15 @@
 import MainLayout from "./layouts/main.layout";
 import {Sidebar} from "./components/sidebar";
-import ContentContainer from "./containers/Content.container";
+import PagesContainer from "./containers/Pages.container";
 import {useState} from "react";
-import TabPanel from "./components/TabPanel";
-import {Typography} from "@mui/material";
+import Page from "./pages/components/Page";
+import {Box, Typography} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
 import MainContext from "./context/";
+import {DrawerActionButton} from "./components/drawer";
+
+import pic3 from "./assets/pictures/background/pic3.jpg";
+
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
@@ -21,23 +25,32 @@ function App() {
           <SidebarContainer>
             <Sidebar/>
           </SidebarContainer>
-          <ContentContainer>
-            <TabPanel index={0}>
-              <Typography variant="h5" sx={{textAlign: "center"}}>Home</Typography>
-            </TabPanel>
-            <TabPanel index={1}>
+          <DrawerActionButton/>
+          <PagesContainer>
+            <Page index={0}>
+              <Box sx={{
+                backgroundImage: `url(${pic3})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: '100vh'
+              }}>
+                <Typography variant="h5" sx={{textAlign: "center"}}>Home</Typography>
+              </Box>
+            </Page>
+            <Page index={1}>
               <Typography variant="h5" sx={{textAlign: "center"}}>About me</Typography>
-            </TabPanel>
-            <TabPanel index={2}>
+            </Page>
+            <Page index={2}>
               <Typography variant="h5" sx={{textAlign: "center"}}>Resume</Typography>
-            </TabPanel>
-            <TabPanel index={3}>
+            </Page>
+            <Page index={3}>
               <Typography variant="h5" sx={{textAlign: "center"}}>Works</Typography>
-            </TabPanel>
-            <TabPanel index={4}>
+            </Page>
+            <Page index={4}>
               <Typography variant="h5" sx={{textAlign: "center"}}>Contacts me</Typography>
-            </TabPanel>
-          </ContentContainer>
+            </Page>
+          </PagesContainer>
         </MainLayout>
       </MainContext.Provider>
   );

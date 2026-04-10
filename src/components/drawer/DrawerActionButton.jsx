@@ -8,7 +8,7 @@ import MainContext from "../../context/";
 const DrawerActionButton = () => {
   const {setDrawerOpen} = useContext(MainContext);
   return (
-      <Box sx={{display: {xs: "block", sm: "block", md: "none", lg: "none", xl: "none"}}}>
+      <Box sx={{position: "absolute" ,display: {xs: "block", sm: "block", md: "none", lg: "none", xl: "none"}}}>
         <Fab aria-label="sidbar" size="small" sx={{m: 2, backgroundColor: red[500]}}
              onClick={() => setDrawerOpen(true)}>
           <MenuRounded/>
