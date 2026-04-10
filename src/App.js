@@ -3,12 +3,12 @@ import {Sidebar} from "./components/sidebar";
 import PagesContainer from "./containers/Pages.container";
 import {useState} from "react";
 import Page from "./pages/components/Page";
-import {Box, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
 import MainContext from "./context/";
 import {DrawerActionButton} from "./components/drawer";
+import {Home} from "./pages";
 
-import pic3 from "./assets/pictures/background/pic3.jpg";
 
 
 function App() {
@@ -28,15 +28,7 @@ function App() {
           <DrawerActionButton/>
           <PagesContainer>
             <Page index={0}>
-              <Box sx={{
-                backgroundImage: `url(${pic3})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: '100vh'
-              }}>
-                <Typography variant="h5" sx={{textAlign: "center"}}>Home</Typography>
-              </Box>
+              <Home/>
             </Page>
             <Page index={1}>
               <Typography variant="h5" sx={{textAlign: "center"}}>About me</Typography>
