@@ -35,7 +35,7 @@ const About = () => {
 
 
   return (
-      <Card sx={{height: "100vh", backgroundColor: "whitesmoke"}}>
+      <Card sx={{height: "100vh", backgroundColor: "whitesmoke", overflowY: "scroll"}}>
         <CardContent>
           <Grid container sx={{mx: 3}}>
             <Grid size={{xs: 12, sm: 12, md: 8, lg: 8, xl: 8}}>
