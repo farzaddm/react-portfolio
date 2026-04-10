@@ -5,16 +5,11 @@ import {useRef, useEffect, useCallback} from "react";
 import Particles from "react-particles";
 import {loadSlim} from "tsparticles-slim";
 import {links} from "../constants/particles";
+import {strings} from "../constants/";
 
 const Home = () => {
   const nameEl = useRef(null);
   const infoEl = useRef(null);
-
-  const strings = [
-    "من یک دانشجو کارشناسی ورودی ۴۰۲ دانشگاه علم و صنعت ایران هستم",
-    "دارای معدل الف در دانشگاه هستم",
-    "من یک برنامه نویس فول استک هستم",
-  ]
 
   useEffect(() => {
     const typedName = new Typed(nameEl.current, {

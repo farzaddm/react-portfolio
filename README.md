@@ -8,4 +8,4 @@
 * add good text for typing strings
 * color theme, think more about it
 * change the particles color
-* 
+* about page is very bad, fix it
