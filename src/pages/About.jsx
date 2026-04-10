@@ -4,9 +4,36 @@ import casual from "../assets/pictures/avatar/casual.jpg";
 import DevInfo from "./components/DevInfo";
 import Skill from "./components/Skill";
 import {devSkills} from "../constants";
+import {useEffect, useState} from "react";
 
 const About = () => {
-  const {html, node} = devSkills;
+  const {htmlSkill, nodeSkill, gitSkill} = devSkills;
+  const [node, setNode] = useState(0);
+  const [html, setHtml] = useState(0);
+  const [git, setGit] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setNode(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, nodeSkill.value);
+      });
+
+      setHtml(oldProgress => {
+        const diff = Math.min(Math.random() * 10, 4);
+        return Math.min(oldProgress + diff, htmlSkill.value);
+      });
+
+      setGit(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, gitSkill.value);
+      });
+
+    }, 100);
+    return () => clearInterval(timer);
+  });
+
+
   return (
       <Card sx={{height: "100vh", backgroundColor: "whitesmoke"}}>
         <CardContent>
@@ -53,9 +80,9 @@ const About = () => {
                   </Typography>
                 } sx={{p: 3}}></Chip>
               </Divider>
-              <Skill name={html.name} icon={html.icon} color={html.color} value={60}/>
-              <Skill name={node.name} icon={node.icon} color={node.color} value={95}/>
-
+              <Skill name={htmlSkill.name} icon={htmlSkill.icon} color={htmlSkill.color} value={html}/>
+              <Skill name={nodeSkill.name} icon={nodeSkill.icon} color={nodeSkill.color} value={node}/>
+              <Skill name={gitSkill.name} icon={gitSkill.icon} color={gitSkill.color} value={git}/>
             </Grid>
 
 

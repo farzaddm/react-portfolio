@@ -1,5 +1,5 @@
 import {Avatar, Typography} from "@mui/material";
-import avatar from "../../assets/pictures/avatar/avatar.png";
+import avatar from "../../assets/pictures/avatar/coat.jpg";
 
 const SidebarHeader = () => {
   return (

@@ -16,7 +16,7 @@ const Skill = ({icon, color, name, value}) => {
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Box sx={{ minWidth: 35 }}>
             <Typography variant="body2" color="purple">
-              {value}%
+              {Math.round(value)}%
             </Typography>
           </Box>
           <Box sx={{ width: "100%", mr: 1 }}>

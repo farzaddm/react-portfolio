@@ -23,8 +23,8 @@ const Home = () => {
     const typedInfo = new Typed(infoEl.current, {
       strings: strings,
       startDelay: 1500,
-      typeSpeed: 100,
-      backSpeed: 80,
+      typeSpeed: 80,
+      backSpeed: 40,
       backDelay: 50,
       loop: true,
       showCursor: false,
