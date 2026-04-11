@@ -9,3 +9,6 @@
 * color theme, think more about it
 * change the particles color
 * about page is very bad, fix it
+* change the font 
+* try some other particle
+* 

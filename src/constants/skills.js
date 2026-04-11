@@ -1,6 +1,4 @@
-import HtmlIcon from "../assets/pictures/icons/html5-original.svg";
-import NodeIcon from "../assets/pictures/icons/nodejs-original.svg";
-import GitIcon from "../assets/pictures/icons/git-original.svg";
+import {HtmlIcon, NodeIcon, GitIcon} from "../assets/pictures/icons/"
 
 const devSkills = {
   htmlSkill: {
