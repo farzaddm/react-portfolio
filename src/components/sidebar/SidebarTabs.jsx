@@ -10,7 +10,7 @@ const SidebarTabs = () => {
   const tabs = tabsData();
   return (
       <Tabs orientation="vertical" variant="scrollable" scrollButtons="auto" allowScrollButtonsMobile value={pageNumber}
-            onChange={handlePageNumber}>
+            indicatorColor="secondary" textColor="secondary" onChange={handlePageNumber}>
         {tabs.map((tab, index) => (
             <Tab label={tab.label} icon={tab.icon} iconPosition="start" key={index}
                  sx={{"&.MuiTab-root": {minHeight: 50, my: 0.5, mx: 1, backgroundColor: grey[800], borderRadius: 2}}}

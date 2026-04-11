@@ -1,15 +1,25 @@
 import {Avatar, Typography} from "@mui/material";
 import avatar from "../../assets/pictures/avatar/coat.jpg";
+import {RandomReveal} from "react-random-reveal";
+import {persianAlphabets} from "../../constants";
+import {useState} from "react";
 
 const SidebarHeader = () => {
+  const [start, setStart] = useState(false);
   return (
       <>
         <Avatar src={avatar} variant="rounded"
                 sx={{height: 200, width: 200, margin: "0 auto", display: {xs: 'none', md: 'block', lg: 'block'}}}/>
-        <Typography variant="h6" color="whitesmoke">فرزاد دهقان منشادی</Typography>
-        <Typography variant="caption" color="whitesmoke">
-          دانشجوی مهندسی کامپیوتر دانشگاه علم و صنعت ایران
+
+        <Typography variant="h6" color="whitesmoke">
+          <RandomReveal isPlaying characters="فرزاد دهقان منشادی" duration={1.5} characterSet={persianAlphabets} onComplete={() => setStart(true)}/>
         </Typography>
+
+        {start && (
+          <Typography variant="caption" color="gray">
+          دانشجوی مهندسی کامپیوتر دانشگاه علم و صنعت ایران
+          </Typography>
+          )}
       </>
   )
 }

@@ -61,8 +61,7 @@ const Home = () => {
                      width: "100%",
                      height: "100%",
                      zIndex: 0,
-                     pointerEvents: "none",  // ← کلیک را از ذرات عبور می‌دهد
-
+                     pointerEvents: "none",
                    }}
         />
         <Typography ref={nameEl} variant="h3" color="whitesmoke"/>
