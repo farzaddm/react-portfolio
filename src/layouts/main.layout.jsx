@@ -4,7 +4,7 @@ import {HelmetProvider} from "react-helmet-async";
 import rtlPlugin from "stylis-plugin-rtl";
 import createCache from "@emotion/cache";
 import {prefixer} from "stylis";
-import {index} from "./theme";
+import {lightTheme, darkTheme} from "./theme";
 import {Grid} from "@mui/material";
 
 const cacheRTL = createCache({
@@ -12,10 +12,10 @@ const cacheRTL = createCache({
   stylisPlugins: [prefixer, rtlPlugin]
 });
 
-const MainLayout = ({children}) => {
+const MainLayout = ({children, mode}) => {
   return (
       <CacheProvider value={cacheRTL}>
-        <ThemeProvider theme={index}>
+        <ThemeProvider theme={mode === "dark" ? darkTheme : lightTheme}>
           <HelmetProvider>
             <Grid container sx={{height: "100vh"}}>
               {children}

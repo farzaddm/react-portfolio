@@ -13,6 +13,7 @@ import {Home, About, Resume, Works} from "./pages";
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [mode, setMode] = useState("dark");
 
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
@@ -36,11 +37,15 @@ function App() {
 
   const handlePageNumber = (event, newValue) => {
     setPageNumber(newValue);
-  }
+  };
+
+  const handelThemeChange = () => {
+    setMode(prevMode => prevMode === "dark" ? "light" : "dark");
+  };
 
   return (
-      <MainContext.Provider value={{pageNumber, drawerOpen, setDrawerOpen, handlePageNumber}}>
-        <MainLayout>
+      <MainContext.Provider value={{pageNumber, drawerOpen, handelThemeChange, setDrawerOpen, handlePageNumber}}>
+        <MainLayout mode={mode}>
           <SidebarContainer>
             <Sidebar/>
           </SidebarContainer>

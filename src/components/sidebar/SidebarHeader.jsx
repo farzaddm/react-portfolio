@@ -4,12 +4,15 @@ import {RandomReveal} from "react-random-reveal";
 import {persianAlphabets, socialMedias} from "../../constants";
 import {useState} from "react";
 import SocialMedia from "../data/SocialMedia";
+import ThemeActionButton from "../ThemeActionButton";
 
 const SidebarHeader = () => {
   const [start, setStart] = useState(false);
 
   return (
       <>
+        <ThemeActionButton/>
+
         <Avatar src={avatar} variant="rounded"
                 sx={{height: 200, width: 200, margin: "0 auto", display: {xs: 'none', md: 'block', lg: 'block'}}}/>
 
