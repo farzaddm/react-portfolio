@@ -1,6 +1,6 @@
 import {HtmlIcon, NodeIcon, GitIcon} from "../assets/pictures/icons/"
 
-const devSkills = {
+export const devSkills = {
   htmlSkill: {
     id: 0,
     name: "HTML",
@@ -22,6 +22,69 @@ const devSkills = {
     color: "secondary",
     value: 65
   },
-}
+};
 
-export default devSkills;
+export const technologies = [
+  {
+    name: "React",
+    icon: GitIcon,
+  },
+  {
+    name: "node.js",
+    icon: NodeIcon,
+  },
+  {
+    name: "git",
+    icon: GitIcon,
+  },
+  {
+    name: "React",
+    icon: GitIcon,
+  },
+  {
+    name: "node.js",
+    icon: NodeIcon,
+  },
+  {
+    name: "git",
+    icon: GitIcon,
+  },
+  {
+    name: "React",
+    icon: GitIcon,
+  },
+  {
+    name: "node.js",
+    icon: NodeIcon,
+  },
+  {
+    name: "git",
+    icon: GitIcon,
+  },
+  {
+    name: "React",
+    icon: GitIcon,
+  },
+  {
+    name: "node.js",
+    icon: NodeIcon,
+  },
+  {
+    name: "git",
+    icon: GitIcon,
+  },
+  {
+    name: "React",
+    icon: GitIcon,
+  },
+  {
+    name: "node.js",
+    icon: NodeIcon,
+  },
+  {
+    name: "git",
+    icon: GitIcon,
+  },
+
+];
+

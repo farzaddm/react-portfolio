@@ -16,3 +16,5 @@
 * the tooltip wont show text in mobile
 * combine about and resume
 * check for DRY role
+* fill the technologies
+* 
