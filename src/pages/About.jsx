@@ -1,17 +1,26 @@
 import {Avatar, Box, Card, CardContent, Chip, Divider, Grid, Tooltip, Typography} from "@mui/material";
-import {CodeRounded, SelfImprovementRounded} from "@mui/icons-material";
+import {CodeRounded, HomeRepairServiceRounded, SchoolRounded, SelfImprovementRounded} from "@mui/icons-material";
 import casual from "../assets/pictures/avatar/casual.jpg";
-import DevInfo from "./components/DevInfo";
-import Skill from "./components/Skill";
+import {DevInfo, Skill, TimelineCustom} from "./components/";
 import {devSkills, interestingDetails} from "../constants";
 import {useEffect, useState} from "react";
 import CountUp from "react-countup";
+import {educationTimeline} from "../constants/details";
 
 const About = () => {
   const {htmlSkill, nodeSkill, gitSkill} = devSkills;
   const [node, setNode] = useState(0);
   const [html, setHtml] = useState(0);
   const [git, setGit] = useState(0);
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    return () => setLoading(false);
+  }, []);
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,28 +71,51 @@ const About = () => {
                   {interestingDetails.map((item, index) => (
                       <Box key={index} component="div" sx={{width: 1, mb: 2, mt: 3}}>
                         <Tooltip title={item.toolTipTitle} placement="right" arrow>
-                        <Chip icon={item.icon}
-                              label={
-                                <Typography variant="body1" color="whitesmoke">
-                                  <CountUp end={item.total} start={0} duration={2} />
-                                </Typography>
-                              }
-                              sx={{p: 2, backgroundColor: item.color, width: 1}}/>
+                          <Chip icon={item.icon}
+                                label={
+                                  <Typography variant="body1" color="whitesmoke">
+                                    <CountUp end={item.total} start={0} duration={2}/>
+                                  </Typography>
+                                }
+                                sx={{p: 2, backgroundColor: item.color, width: 1}}/>
                         </Tooltip>
                       </Box>
                   ))}
                 </Grid>
 
               </Grid>
-
-
             </Grid>
+
             <Grid size={{xs: 0, sm: 0, md: 4, lg: 4, xl: 4}}>
               <Avatar src={casual} variant="rounded" sx={{
                 height: 300, width: 250, margin: "0 auto", display: {
                   xl: "block", lg: "block", md: "block", sm: "none", xs: "none"
                 }
               }}>FD</Avatar>
+            </Grid>
+          </Grid>
+
+          <Grid container sx={{mt: 4}}>
+            <Grid size={{xs: 6}}>
+              <Divider textAlign="center" sx={{"&::before, &::after": {borderColor: "warning.main"}, mx: 0.5}}>
+                <Chip color="warning" icon={<HomeRepairServiceRounded/>} sx={{p: 3}} label={
+                  <Typography variant="body1" color="black" sx={{textAlign: "center"}}>
+                    تجربیات
+                  </Typography>
+                }/>
+              </Divider>
+              <TimelineCustom loading={loading} data={educationTimeline} color="warning"/>
+
+            </Grid>
+            <Grid size={{xs: 6}}>
+              <Divider textAlign="center" sx={{"&::before, &::after": {borderColor: "info.main"}, mx: 0.5}}>
+                <Chip color="info" icon={<SchoolRounded/>} sx={{p: 3}} label={
+                  <Typography variant="body1" color="black" sx={{textAlign: "center"}}>
+                    تحصیلات
+                  </Typography>
+                }/>
+              </Divider>
+              <TimelineCustom loading={loading} data={educationTimeline} color="info"/>
             </Grid>
           </Grid>
 

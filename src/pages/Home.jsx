@@ -34,7 +34,7 @@ const Home = () => {
 
   const options = {
     dots: false,           // Hide dots for cleaner look
-    arrows: true,        // Hide arrows for autoplay cycle
+    arrows: false,        // Hide arrows for autoplay cycle
     infinite: true,       // Loop infinitely
     autoplay: true,       // Auto rotate
     autoplaySpeed: 2000,  // Speed between slides (2 seconds)

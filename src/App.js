@@ -7,7 +7,7 @@ import {Typography, useMediaQuery, useTheme} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
 import MainContext from "./context/";
 import {DrawerActionButton} from "./components/drawer";
-import {Home, About, Resume, Works} from "./pages";
+import {Home, About, Works} from "./pages";
 
 
 function App() {
@@ -33,9 +33,8 @@ function App() {
     const titles = {
       0: "خانه",
       1: "درباره من",
-      2: "رزومه",
-      3: "نمونه کارها",
-      4: "تماس با من"
+      2: "نمونه کارها",
+      3: "تماس با من"
     };
     document.title = `وب سایت شخصی | ${titles[pageNumber]}`;
   }, [pageNumber]);
@@ -63,12 +62,9 @@ function App() {
               <About/>
             </Page>
             <Page index={2}>
-              <Resume/>
-            </Page>
-            <Page index={3}>
               <Works/>
             </Page>
-            <Page index={4}>
+            <Page index={3}>
               <Typography variant="h5" sx={{textAlign: "center"}}>Contacts me</Typography>
             </Page>
           </PagesContainer>
