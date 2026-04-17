@@ -11,10 +11,10 @@ const SidebarFooter = () => {
         alignItems: "center",
         height: 100
       }}>
-        <Typography variant="subtitle2" color="whitesmoke">
+        <Typography variant="subtitle2" color="text.primary">
           طراحی شده با{" "} <FavoriteRounded sx={{verticalAlign: "middle", color: "tomato", height: 20}}/>
         </Typography>
-        <Typography variant="caption" color="whitesmoke" sx={{mt: 2}}>
+        <Typography variant="caption" color="text.primary" sx={{mt: 2}}>
           کپی رایت ۱۴۰۵{" "}<CopyrightRounded sx={{verticalAlign: "middle", height: 20}}/>
         </Typography>
       </Box>

@@ -7,7 +7,6 @@ const SocialMedia = ({media}) => {
           {media.icon}
         </a>
       </IconButton>
-
   )
 }
 

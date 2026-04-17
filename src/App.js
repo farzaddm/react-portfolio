@@ -13,10 +13,15 @@ import {Home, About, Resume, Works} from "./pages";
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState();
 
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  useEffect(() => {
+    setMode(prefersDarkMode ? "dark" : "light");
+  }, [prefersDarkMode]);
 
   useEffect(() => {
     if (isMdUp) {

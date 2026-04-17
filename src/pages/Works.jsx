@@ -32,7 +32,7 @@ const Works = () => {
           <Slide direction="down" in={loading} timeout={500}>
             <Divider textAlign="center" sx={{"&::before, &::after": {borderColor: "error.main"}}}>
               <Chip color="error" icon={<SettingsEthernetRounded/>} sx={{p: 3}} label={
-                <Typography variant="body1" color="black" sx={{textAlign: "center"}}>
+                <Typography variant="body1" color="text.primary" sx={{textAlign: "center"}}>
                   کارهای من
                 </Typography>
               }/>
