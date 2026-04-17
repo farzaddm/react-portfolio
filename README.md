@@ -11,4 +11,8 @@
 * about page is very bad, fix it
 * change the font 
 * try some other particle
+* change the about me icon in sidebar
+* add admin panel that can control the details
+* the tooltip wont show text in mobile
+* combine about and resume
 * 

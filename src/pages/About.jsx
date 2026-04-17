@@ -40,16 +40,12 @@ const About = () => {
         <CardContent>
           <Grid container sx={{mx: 3}}>
             <Grid size={{xs: 12, sm: 12, md: 8, lg: 8, xl: 8}}>
-              <Divider textAlign="left" sx={{
-                "&::before, &::after": {
-                  borderColor: "primary.main"
-                }
-              }}>
-                <Chip color="primary" icon={<CodeRounded/>} label={
+              <Divider textAlign="left" sx={{"&::before, &::after": {borderColor: "primary.main"}}}>
+                <Chip color="primary" icon={<CodeRounded/>} sx={{p: 3}} label={
                   <Typography variant="body1" color="black" sx={{textAlign: "center"}}>
                     دانشجوی مهندسی کامپیوتر و توسعه دهنده فول استک
                   </Typography>
-                } sx={{p: 3}}></Chip>
+                }/>
               </Divider>
 
               <Grid container>
@@ -69,7 +65,7 @@ const About = () => {
                         <Chip icon={item.icon}
                               label={
                                 <Typography variant="body1" color="whitesmoke">
-                                  <CountUp end={item.total} start={0} duration={2}/>
+                                  <CountUp end={item.total} start={0} duration={2} />
                                 </Typography>
                               }
                               sx={{p: 2, backgroundColor: item.color, width: 1}}/>

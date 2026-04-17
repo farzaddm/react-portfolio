@@ -1,9 +1,8 @@
 import {Avatar, Box, Typography} from "@mui/material";
 import avatar from "../../assets/pictures/avatar/coat.jpg";
 import {RandomReveal} from "react-random-reveal";
-import {persianAlphabets} from "../../constants";
+import {persianAlphabets, socialMedias} from "../../constants";
 import {useState} from "react";
-import socialMedias from "../../constants/socialMedias";
 import SocialMedia from "../data/SocialMedia";
 
 const SidebarHeader = () => {

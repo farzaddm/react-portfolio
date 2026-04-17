@@ -7,7 +7,7 @@ import {Typography, useMediaQuery, useTheme} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
 import MainContext from "./context/";
 import {DrawerActionButton} from "./components/drawer";
-import {Home, About} from "./pages";
+import {Home, About, Resume} from "./pages";
 
 
 function App() {
@@ -51,9 +51,9 @@ function App() {
             </Page>
             <Page index={1}>
               <About/>
-              > </Page>
+            </Page>
             <Page index={2}>
-              <Typography variant="h5" sx={{textAlign: "center"}}>Resume</Typography>
+              <Resume/>
             </Page>
             <Page index={3}>
               <Typography variant="h5" sx={{textAlign: "center"}}>Works</Typography>
