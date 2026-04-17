@@ -1,7 +1,7 @@
 import {Card, CardContent, Chip, Divider, Grid, Slide, Typography} from "@mui/material";
 import {HomeRepairServiceRounded, SchoolRounded, SettingsEthernetRounded} from "@mui/icons-material";
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from "@mui/lab";
-import {educationDetails} from "../constants/details";
+import {educationTimeline} from "../constants/details";
 import {useEffect, useState} from "react";
 
 
@@ -39,14 +39,14 @@ const Resume = () => {
               </Divider>
 
               <Timeline position="right" sx={{direction: "ltr"}}>
-                {educationDetails.map((item, index) => (
+                {educationTimeline.map((item, index) => (
                     <Slide direction="up" in={loading} timeout={(index + 1) * 150}>
                       <TimelineItem key={index}>
                         <TimelineSeparator>
                           <TimelineDot color="warning" variant="outlined">
                             <HomeRepairServiceRounded color="warning"/>
                           </TimelineDot>
-                          {index < educationDetails.length - 1 && <TimelineConnector/>}
+                          {index < educationTimeline.length - 1 && <TimelineConnector/>}
                         </TimelineSeparator>
                         <TimelineContent>
                           <Typography variant="caption" color="grey">
@@ -79,7 +79,7 @@ const Resume = () => {
               </Divider>
 
               <Timeline position="right" sx={{direction: "ltr"}}>
-                {educationDetails.map((item, index) => (
+                {educationTimeline.map((item, index) => (
                     <Slide direction="up" in={loading} timeout={(index + 1) * 150}>
 
                       <TimelineItem key={index}>
@@ -87,7 +87,7 @@ const Resume = () => {
                           <TimelineDot color="info" variant="outlined">
                             <SchoolRounded color="info"/>
                           </TimelineDot>
-                          {index < educationDetails.length - 1 && <TimelineConnector/>}
+                          {index < educationTimeline.length - 1 && <TimelineConnector/>}
                         </TimelineSeparator>
                         <TimelineContent>
                           <Typography variant="caption" color="grey">
