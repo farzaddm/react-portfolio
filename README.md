@@ -15,4 +15,4 @@
 * add admin panel that can control the details
 * the tooltip wont show text in mobile
 * combine about and resume
-* 
+* check for DRY role
