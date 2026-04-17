@@ -34,11 +34,11 @@ const Home = () => {
       typedInfo.destroy();
       typedName.destroy();
     };
-  });
+  }, []);
 
   const particlesInit = useCallback(async engine => {
     await loadSlim(engine);
-  }, [])
+  }, []);
 
   return (
       <Box sx={{

@@ -17,7 +17,7 @@ const SidebarHeader = () => {
 
         {start && (
           <Typography variant="caption" color="gray">
-          دانشجوی مهندسی کامپیوتر دانشگاه علم و صنعت ایران
+          دانشجوی کامپیوتر علم و صنعت ایران
           </Typography>
           )}
       </>

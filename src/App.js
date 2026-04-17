@@ -1,7 +1,7 @@
 import MainLayout from "./layouts/main.layout";
 import {Sidebar} from "./components/sidebar";
 import PagesContainer from "./containers/Pages.container";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Page from "./pages/components/Page";
 import {Typography} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
@@ -13,6 +13,18 @@ import {Home, About} from "./pages";
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    console.log(pageNumber);
+    const titles = {
+      0: "خانه",
+      1: "درباره من",
+      2: "رزومه",
+      3: "نمونه کارها",
+      4: "تماس با من"
+    };
+    document.title = `وب سایت شخصی | ${titles[pageNumber]}`;
+  }, [pageNumber]);
 
   const handlePageNumber = (event, newValue) => {
     setPageNumber(newValue);
