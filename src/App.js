@@ -3,7 +3,7 @@ import {Sidebar} from "./components/sidebar";
 import PagesContainer from "./containers/Pages.container";
 import {useEffect, useState} from "react";
 import Page from "./pages/components/Page";
-import {Typography} from "@mui/material";
+import {Typography, useMediaQuery, useTheme} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
 import MainContext from "./context/";
 import {DrawerActionButton} from "./components/drawer";
@@ -14,8 +14,16 @@ function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+
   useEffect(() => {
-    console.log(pageNumber);
+    if (isMdUp) {
+      setDrawerOpen(false);
+    }
+  }, [isMdUp]);
+
+  useEffect(() => {
     const titles = {
       0: "خانه",
       1: "درباره من",
@@ -43,7 +51,7 @@ function App() {
             </Page>
             <Page index={1}>
               <About/>
->            </Page>
+              > </Page>
             <Page index={2}>
               <Typography variant="h5" sx={{textAlign: "center"}}>Resume</Typography>
             </Page>
