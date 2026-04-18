@@ -1,4 +1,4 @@
-import {HtmlIcon, NodeIcon, GitIcon} from "../assets/pictures/icons/"
+import {HtmlIcon, NodeIcon, GitIcon, ReactIcon} from "../assets/pictures/icons/"
 
 export const devSkills = {
   htmlSkill: {
@@ -27,7 +27,7 @@ export const devSkills = {
 export const technologies = [
   {
     name: "React",
-    icon: GitIcon,
+    icon: ReactIcon,
   },
   {
     name: "node.js",
@@ -38,53 +38,16 @@ export const technologies = [
     icon: GitIcon,
   },
   {
-    name: "React",
-    icon: GitIcon,
-  },
-  {
-    name: "node.js",
+    name: "CSS",
     icon: NodeIcon,
   },
   {
-    name: "git",
+    name: "HTML",
     icon: GitIcon,
   },
   {
-    name: "React",
-    icon: GitIcon,
+    name: "JavaScript",
+    icon: ReactIcon,
   },
-  {
-    name: "node.js",
-    icon: NodeIcon,
-  },
-  {
-    name: "git",
-    icon: GitIcon,
-  },
-  {
-    name: "React",
-    icon: GitIcon,
-  },
-  {
-    name: "node.js",
-    icon: NodeIcon,
-  },
-  {
-    name: "git",
-    icon: GitIcon,
-  },
-  {
-    name: "React",
-    icon: GitIcon,
-  },
-  {
-    name: "node.js",
-    icon: NodeIcon,
-  },
-  {
-    name: "git",
-    icon: GitIcon,
-  },
-
 ];
 

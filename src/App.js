@@ -3,11 +3,11 @@ import {Sidebar} from "./components/sidebar";
 import PagesContainer from "./containers/Pages.container";
 import {useEffect, useState} from "react";
 import Page from "./pages/components/Page";
-import {Typography, useMediaQuery, useTheme} from "@mui/material";
+import {useMediaQuery, useTheme} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
 import MainContext from "./context/";
 import {DrawerActionButton} from "./components/drawer";
-import {Home, About, Works} from "./pages";
+import {Home, About, Works, Contact} from "./pages";
 
 
 function App() {
@@ -65,7 +65,7 @@ function App() {
               <Works/>
             </Page>
             <Page index={3}>
-              <Typography variant="h5" sx={{textAlign: "center"}}>Contacts me</Typography>
+              <Contact/>
             </Page>
           </PagesContainer>
         </MainLayout>
