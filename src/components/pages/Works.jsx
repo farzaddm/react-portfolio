@@ -7,14 +7,14 @@ import {
   CardContent,
   CardMedia,
   Chip,
-  Divider,
   Grid,
   Slide,
   Typography
 } from "@mui/material";
 import {useEffect, useState} from "react";
 import {SettingsEthernetRounded} from "@mui/icons-material";
-import {worksDetails} from "../constants";
+import {worksDetails} from "../../constants";
+import {TitleHeader} from "../ui";
 
 
 const Works = () => {
@@ -30,13 +30,9 @@ const Works = () => {
       <Card sx={{height: "100vh", backgroundColor: "whitesmoke", overflow: "scroll"}}>
         <CardContent>
           <Slide direction="down" in={loading} timeout={500}>
-            <Divider textAlign="center" sx={{"&::before, &::after": {borderColor: "error.main"}}}>
-              <Chip color="error" icon={<SettingsEthernetRounded/>} sx={{p: 3}} label={
-                <Typography variant="body1" color="text.primary" sx={{textAlign: "center"}}>
-                  کارهای من
-                </Typography>
-              }/>
-            </Divider>
+            <Box>
+              <TitleHeader color={"info"} icon={<SettingsEthernetRounded/>}>کارهای من</TitleHeader>
+            </Box>
           </Slide>
 
           <Grid container sx={{mx: 3}}>
@@ -85,7 +81,6 @@ const Works = () => {
                 </Grid>
             ))}
           </Grid>
-
 
         </CardContent>
       </Card>

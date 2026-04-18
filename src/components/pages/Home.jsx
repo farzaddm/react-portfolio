@@ -1,11 +1,11 @@
 import {Box, Typography} from "@mui/material";
-import pic7 from "../assets/pictures/background/pic7.jpg";
+import pic7 from "../../assets/pictures/background/pic7.jpg";
 import Typed from "typed.js";
 import {useRef, useEffect, useCallback} from "react";
 import Particles from "react-particles";
 import {loadSlim} from "tsparticles-slim";
-import {links} from "../constants/particles";
-import {technologies, strings} from "../constants/";
+import {links} from "../../constants/particles";
+import {technologies, strings} from "../../constants";
 import Slider from "react-slick";
 
 
