@@ -18,3 +18,7 @@
 * check for DRY role
 * fill the technologies
 * the change theme button wont show in mobile
+* add google recaptcha, 181
+* refactor::
+  * custom avatar
+  * put skills in about to different file, too many use state

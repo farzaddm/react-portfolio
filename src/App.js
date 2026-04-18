@@ -2,12 +2,12 @@ import MainLayout from "./layouts/main.layout";
 import {Sidebar} from "./components/sidebar";
 import PagesContainer from "./containers/Pages.container";
 import {useEffect, useState} from "react";
-import Page from "./pages/components/Page";
+import {Page} from "./components/ui/";
 import {useMediaQuery, useTheme} from "@mui/material";
 import SidebarContainer from "./containers/Sidebar.container";
 import MainContext from "./context/";
 import {DrawerActionButton} from "./components/drawer";
-import {Home, About, Works, Contact} from "./pages";
+import {Home, About, Works, Contact} from "./components/pages";
 
 
 function App() {
