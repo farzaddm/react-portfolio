@@ -8,22 +8,22 @@ export const socialMedias = [
   },
   {
     label: "Telegram",
-    url: "https://github.com/farzaddm",
+    url: "https://t.me/FARZADdeh",
     icon: <Telegram sx={{color: "grey"}}/>,
   },
   {
     label: "WhatsApp",
-    url: "https://github.com/farzaddm",
+    url: "https://wa.me/989305584149",
     icon: <WhatsApp sx={{color: "grey"}}/>,
   },
   {
     label: "Email",
-    url: "https://github.com/farzaddm",
+    url: "mailto:farzad.d.m84@gmail.com",
     icon: <EmailOutlined sx={{color: "grey"}}/>,
   },
   {
     label: "LinkedIn",
-    url: "https://github.com/farzaddm",
+    url: "https://www.linkedin.com/in/farzad-dehghan-manshadi",
     icon: <LinkedIn sx={{color: "grey"}}/>,
   }
 ]

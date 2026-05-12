@@ -17,7 +17,9 @@ const SidebarTabs = () => {
         {tabs.map((tab, index) => (
             <Tab label={tab.label} icon={tab.icon} iconPosition="start" key={index}
                  sx={{
-                   "&.MuiTab-root": {minHeight: 50},
+                   "&.MuiTab-root": {
+                     minHeight: 50,
+                   },
                    backgroundColor: theme.palette.mode === "dark" ? grey[800] : grey[500],
                    my: 0.5,
                    mx: 1,

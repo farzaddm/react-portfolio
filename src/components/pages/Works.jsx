@@ -27,7 +27,7 @@ const Works = () => {
   }, []);
 
   return (
-      <Card sx={{height: "100vh", backgroundColor: "whitesmoke", overflow: "scroll"}}>
+      <Card sx={{height: "100vh", backgroundColor: "background.default", overflow: "scroll"}}>
         <CardContent>
           <Slide direction="down" in={loading} timeout={500}>
             <Box>

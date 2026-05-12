@@ -4,3 +4,8 @@ export {default as GitIcon} from "./git-original.svg";
 export {default as CSSIcon} from "./css3-original.svg";
 export {default as JavascriptIcon} from "./javascript-original.svg";
 export {default as ReactIcon} from "./react-original.svg";
+export {default as PythonIcon} from "./python.svg";
+export {default as TypescriptIcon} from "./typescript.svg";
+export {default as TailwindIcon} from "./tailwind.svg";
+export {default as PostgresIcon} from "./postgres.svg";
+export {default as GolangIcon} from "./golang.svg";

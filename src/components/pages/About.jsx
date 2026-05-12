@@ -1,24 +1,28 @@
-import {Avatar, Box, Card, CardContent, Chip, Grid, Slide, Tooltip, Typography} from "@mui/material";
+import {Box, Card, CardContent, Chip, Grid, Tooltip, Typography} from "@mui/material";
 import {
-  CodeRounded,
-  HomeRepairServiceRounded,
-  SchoolRounded,
-  SelfImprovementRounded,
-  BadgeRounded,
-  LocationCityRounded, EmailRounded, PhoneRounded, Man2Rounded
+  HomeRepairServiceRounded, SchoolRounded, SelfImprovementRounded, LocationCityRounded,
+  EmailRounded, PhoneRounded, Person4Rounded, CalendarMonthRounded
 } from "@mui/icons-material";
-import casual from "../../assets/pictures/avatar/casual.jpg";
 import {DevInfo, Skill, TimelineCustom, TitleHeader} from "../ui";
 import {devSkills, interestingDetails} from "../../constants";
 import {useEffect, useState} from "react";
 import CountUp from "react-countup";
 import {educationTimeline} from "../../constants/details";
+import AboutText from "../ui/AboutText";
 
 const About = () => {
-  const {htmlSkill, nodeSkill, gitSkill} = devSkills;
+  const {htmlSkill, nodeSkill, gitSkill, pythonSkill, reactSkill, golangSkill, javascriptSkill, postgresSkill, tailwindSkill, typescriptSkill} = devSkills;
   const [node, setNode] = useState(0);
   const [html, setHtml] = useState(0);
   const [git, setGit] = useState(0);
+  const [python, setPython] = useState(0);
+  const [react, setReact] = useState(0);
+  const [golang, setGolang] = useState(0);
+  const [javascript, setJavascript] = useState(0);
+  const [postgres, setPostgres] = useState(0);
+  const [tailwind, setTailwind] = useState(0);
+  const [typescript, setTypescript] = useState(0);
+
 
   const [loading, setLoading] = useState(false);
 
@@ -46,28 +50,68 @@ const About = () => {
         return Math.min(oldProgress + diff, gitSkill.value);
       });
 
+      setReact(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, reactSkill.value);
+      });
+
+      setPython(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, pythonSkill.value);
+      });
+
+      setGolang(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, golangSkill.value);
+      });
+
+      setTailwind(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, tailwindSkill.value);
+      });
+
+      setJavascript(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, javascriptSkill.value);
+      });
+
+      setTypescript(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, typescriptSkill.value);
+      });
+
+      setPostgres(oldProgress => {
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, postgresSkill.value);
+      });
+
+
+
+
+
+
     }, 100);
     return () => clearInterval(timer);
   });
+  const mm = `
+فرزادم. از کودکی به دلیل شغل پدرم مدام در حال جابه‌جایی بودیم و این باعث شد قدرت تطبیق و مدیریت شرایط در من تقویت بشه. علاقه به کامپیوتر از دوران راهنمایی شروع شد؛ از یادگیری فتوشاپ و SketchUp و طراحی نقشه‌های سه‌بعدی برای پروژه‌های معماری خاله‌ام تا شرکت در دوره‌های فنی‌حرفه‌ای. در دانشگاه متوجه فاصله‌ بین درس و بازار کار شدم و از ترم دوم یادگیری JavaScript و Node.js را شروع کردم. تجربه فریلنسری هم داشتم(ربات تلگرام با پایتون) که با وجود سختی‌ها، دید خوبی از فضای کار واقعی بهم داد. حالا آماده‌ام در محیط یک شرکت، مهارت‌هام رو توسعه بدم و چالش‌های جدی‌تری رو تجربه کنم.
+
+
+`
 
 
   return (
-      <Card sx={{height: "100vh", backgroundColor: "whitesmoke", overflowY: "scroll"}}>
+      <Card sx={{height: "100vh", backgroundColor: "background.default", overflowY: "scroll"}}>
         <CardContent>
           <Grid container sx={{mx: 3}}>
-            <Grid size={{xs: 12, sm: 12, md: 8, lg: 8, xl: 8}}>
-              <Slide direction="down" in={loading} timeout={500}>
-                <Box>
-                  <TitleHeader color={"success"} icon={<CodeRounded/>} position="left">
-                    دانشجوی مهندسی کامپیوتر و توسعه دهنده فول استک
-                  </TitleHeader>
-                </Box>
-              </Slide>
+            <Grid>
+
+              <AboutText>{mm}</AboutText>
 
               <Grid container>
                 <Grid size={{xs: 12, sm: 8, md: 9, lg: 9}} display={{xs: "none", sm: "block", md: "block"}}>
-                  <DevInfo icon={BadgeRounded}>نام و نام خانوادگی: فرزاد دهقان منشادی</DevInfo>
-                  <DevInfo icon={Man2Rounded}>سن: ۲۱</DevInfo>
+                  <DevInfo icon={Person4Rounded}>نام و نام خانوادگی: فرزاد دهقان منشادی</DevInfo>
+                  <DevInfo icon={CalendarMonthRounded}>تاریخ تولد: ۱۳۸۴</DevInfo>
                   <DevInfo icon={LocationCityRounded}>شهر: یزد/تهران</DevInfo>
                   <DevInfo icon={EmailRounded}>آدرس ایمیل: farzad.d.m84@gmail.com</DevInfo>
                   <DevInfo icon={PhoneRounded}>شماره موبایل: ۰۹۳۰۵۵۸۴۱۴۹</DevInfo>
@@ -89,17 +133,11 @@ const About = () => {
                       </Box>
                   ))}
                 </Grid>
-
               </Grid>
+
+
             </Grid>
 
-            <Grid size={{xs: 0, sm: 0, md: 4, lg: 4, xl: 4}}>
-              <Avatar src={casual} variant="rounded" sx={{
-                height: 300, width: 250, margin: "0 auto", display: {
-                  xl: "block", lg: "block", md: "block", sm: "none", xs: "none"
-                }
-              }}>FD</Avatar>
-            </Grid>
           </Grid>
 
           <Grid container sx={{mt: 4}}>
@@ -115,11 +153,19 @@ const About = () => {
 
           <Grid container>
             <Grid sx={{width: 1, mt: 1}}>
-              <TitleHeader color={"secondary"} icon={<SelfImprovementRounded/>}>مهارت های من</TitleHeader>
+              <TitleHeader color={"success"} icon={<SelfImprovementRounded/>}>مهارت های من</TitleHeader>
 
-              <Skill name={htmlSkill.name} icon={htmlSkill.icon} color={htmlSkill.color} value={html}/>
               <Skill name={nodeSkill.name} icon={nodeSkill.icon} color={nodeSkill.color} value={node}/>
+              <Skill name={pythonSkill.name} icon={pythonSkill.icon} color={pythonSkill.color} value={python}/>
               <Skill name={gitSkill.name} icon={gitSkill.icon} color={gitSkill.color} value={git}/>
+              <Skill name={postgresSkill.name} icon={postgresSkill.icon} color={postgresSkill.color} value={postgres}/>
+              <Skill name={javascriptSkill.name} icon={javascriptSkill.icon} color={javascriptSkill.color} value={javascript}/>
+              <Skill name={typescriptSkill.name} icon={typescriptSkill.icon} color={typescriptSkill.color} value={typescript}/>
+              <Skill name={htmlSkill.name} icon={htmlSkill.icon} color={htmlSkill.color} value={html}/>
+              <Skill name={reactSkill.name} icon={reactSkill.icon} color={reactSkill.color} value={react}/>
+              <Skill name={tailwindSkill.name} icon={tailwindSkill.icon} color={tailwindSkill.color} value={tailwind}/>
+              <Skill name={golangSkill.name} icon={golangSkill.icon} color={golangSkill.color} value={golang}/>
+
             </Grid>
           </Grid>
 

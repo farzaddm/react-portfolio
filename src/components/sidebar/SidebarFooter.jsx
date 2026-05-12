@@ -4,7 +4,6 @@ import {CopyrightRounded, FavoriteRounded} from "@mui/icons-material";
 const SidebarFooter = () => {
   return (
       <Box sx={{
-        flexGrow: 1,
         display: "flex",
         flexDirection: "column",
         justifyContent: "end",
