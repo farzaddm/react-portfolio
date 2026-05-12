@@ -60,12 +60,12 @@ const About = () => {
 
           </Grid>
 
-          <Grid container sx={{mt: 4}}>
-            <Grid size={{xs: 6}}>
+          <Grid container spacing={3} sx={{mt: 4}}>
+            <Grid size={{xs: 12, md:6}}>
               <TitleHeader color={"warning"} icon={<HomeRepairServiceRounded/>}>تجربیات</TitleHeader>
               <TimelineCustom loading={loading} data={educationTimeline} color="warning"/>
             </Grid>
-            <Grid size={{xs: 6}}>
+            <Grid size={{xs: 12, md:6}}>
               <TitleHeader color={"info"} icon={<SchoolRounded/>}>تحصیلات</TitleHeader>
               <TimelineCustom loading={loading} data={educationTimeline} color="info"/>
             </Grid>

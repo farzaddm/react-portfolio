@@ -2,9 +2,6 @@
 
 
 ### TODOs
-* go to the mui doc and make changes to parts
-  * the sidebar can be better.
-* color theme, think more about it
 * change the font 
 * add admin panel that can control the details
 * the tooltip wont show text in mobile

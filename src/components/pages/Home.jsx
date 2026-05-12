@@ -68,9 +68,26 @@ const Home = () => {
                      pointerEvents: "none",
                    }}
         />
-        <Typography ref={nameEl} variant="h3" color="whitesmoke"/>
+        <Typography ref={nameEl} variant="h3" color="whitesmoke"
+                    sx={{
+                      whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", textAlign: "center", px: 2,
+                      fontSize: {
+                        xs: "2.2rem",
+                        sm: "2.6rem",
+                        md: "3.5rem",
+                        lg: "4.5rem",
+                      },
+                    }}/>
         <Typography ref={infoEl} variant="h4" color="whitesmoke"
-                    sx={{textDecoration: "underline", textDecorationColor: "green", m: 2}}/>
+                    sx={{
+                      textDecoration: "underline", textDecorationColor: "green", m: 2,
+                      fontSize: {
+                        xs: "1rem",
+                        sm: "1.4rem",
+                        md: "2rem",
+                        lg: "2.5rem",
+                      },
+                    }}/>
 
         <Box sx={{position: 'absolute', bottom: 50, width: '90%',}}>
           <Slider {...options}>
