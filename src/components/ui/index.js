@@ -6,5 +6,6 @@ export {default as ContactForm} from './Form.contact';
 export {default as TitleHeader} from './Title.header';
 export {default as SocialMedia} from './SocialMedia';
 export {default as ThemeActionButton} from './ThemeActionButton';
+export {default as SkillsProgress} from './SkillsProgress';
 
 

@@ -3,8 +3,7 @@ import avatar from "../../assets/pictures/avatar/coat.jpg";
 import {RandomReveal} from "react-random-reveal";
 import {persianAlphabets, socialMedias} from "../../constants";
 import {useState} from "react";
-import SocialMedia from "../ui/SocialMedia";
-import ThemeActionButton from "../ui/ThemeActionButton";
+import {SocialMedia, ThemeActionButton} from "../ui/";
 import {grey} from "@mui/material/colors";
 
 const SidebarHeader = () => {
