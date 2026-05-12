@@ -53,11 +53,9 @@ const About = () => {
                       </Box>
                   ))}
                 </Grid>
+
               </Grid>
-
-
             </Grid>
-
           </Grid>
 
           <Grid container spacing={3} sx={{mt: 4}}>
