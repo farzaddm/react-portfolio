@@ -1,16 +1,29 @@
-import {Button, Card, CardActions, CardContent, Grid, InputAdornment, TextField} from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Grid,
+  InputAdornment,
+  TextField,
+  Typography,
+  useTheme
+} from "@mui/material";
 import {useFormik} from "formik";
 import {contactValidationSchema} from "../../validations/contact.validation";
 import {EmailRounded, Face6Rounded, SubjectRounded} from "@mui/icons-material";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const ContactForm = () => {
+  const theme = useTheme();
 
   const contactInputNames = {
     fullname: "",
     email: "",
     subject: "",
     message: "",
+    recaptcha: "",
   };
 
   const formik = useFormik({
@@ -97,6 +110,13 @@ const ContactForm = () => {
                 </Grid>
               </CardContent>
               <CardActions sx={{alignItems: "end", flexDirection: "column"}}>
+                <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} hl="fa" theme={theme.palette.mode}
+                           onChange={(value) => formik.setFieldValue("recaptcha", value)}/>
+                {formik.errors.recaptcha && formik.touched.recaptcha && (
+                    <Typography variant="caption" color="error">
+                      {formik.errors.recaptcha}
+                    </Typography>
+                )}
                 <Button type="submit" variant="contained" fullWidth color="success" sx={{mt: 2}}>کلیک کن</Button>
               </CardActions>
             </form>

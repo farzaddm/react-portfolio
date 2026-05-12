@@ -14,3 +14,7 @@
   * custom avatar
   * put skills in about to different file, too many use state
 * for deploy remove pictures and make them optimize
+* 
+  npm install react-google-recaptcha \
+  --proxy http://127.0.0.1:12334 \
+  --registry=https://registry.npmjs.org/
